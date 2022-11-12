@@ -1,0 +1,22 @@
+<?php
+/**
+ * Bartu CRM - https://github.com/kemal-can/BARTU-Comprehensive-CRM
+ *
+ * @version   1.1.7
+ *
+ * @link      Releases - https://github.com/kemal-can/BARTU-Comprehensive-CRM
+ *
+ * @copyright Copyright (c) 2019-2022 mail@kemalcan.net
+ */
+
+namespace App\Innoclapps\Contracts\Resources;
+
+interface HasEmail
+{
+    /**
+     * Get the resource model email address field name
+     *
+     * @return string
+     */
+    public function emailAddressField() : string;
+}

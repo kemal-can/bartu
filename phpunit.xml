@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+        <testsuite name="Controller">
+            <directory suffix="Test.php">./tests/Feature/Controller</directory>
+        </testsuite>
+        <testsuite name="Resource">
+            <directory suffix="Test.php">./tests/Feature/Resource</directory>
+        </testsuite>
+    </testsuites>
+    <groups>
+    <exclude>
+        <group>dusk</group>
+    </exclude>
+    </groups>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./app</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">./app/Contracts</directory>
+            <directory suffix=".php">./app/Innoclapps/Contracts</directory>
+            <file>./app/PreInstall.php</file>
+        </exclude>
+    </coverage>
+    <php>
+        <ini name="memory_limit" value="2048M" />
+        <env name="APP_ENV" value="testing" />
+        <env name="BCRYPT_ROUNDS" value="4" />
+        <env name="CACHE_DRIVER" value="array" />
+        <env name="MAIL_MAILER" value="array" />
+        <env name="QUEUE_CONNECTION" value="sync" />
+        <env name="SESSION_DRIVER" value="array" />
+        <env name="SETTINGS_DRIVER" value="array" />
+        <env name="APP_CONFIG_CACHE" value="bootstrap/cache/config.phpunit.php" />
+        <env name="APP_SERVICES_CACHE" value="bootstrap/cache/services.phpunit.php" />
+        <env name="APP_PACKAGES_CACHE" value="bootstrap/cache/packages.phpunit.php" />
+        <env name="APP_ROUTES_CACHE" value="bootstrap/cache/routes.phpunit.php" />
+        <env name="APP_EVENTS_CACHE" value="bootstrap/cache/events.phpunit.php" />
+        <env name="DB_DATABASE" value=":memory:" />
+        <env name="DB_CONNECTION" value="sqlite" />
+        <env name="PUSHER_APP_ID" value="null"/>
+        <env name="PUSHER_APP_KEY" value="null"/>
+        <env name="PUSHER_APP_SECRET" value="null"/>
+        <env name="PUSHER_APP_CLUSTER" value="null"/>
+    </php>
+</phpunit>
