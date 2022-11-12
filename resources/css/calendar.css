@@ -1,0 +1,84 @@
+/**
+ * Bartu CRM - https://github.com/kemal-can/BARTU-Comprehensive-CRM
+ *
+ * @version   1.1.7
+ *
+ * @link      Releases - https://github.com/kemal-can/BARTU-Comprehensive-CRM
+ *
+ * @copyright Copyright (c) 2019-2022 mail@kemalcan.net
+ */
+.fc-wrapper {
+  --fc-border-color: rgba(var(--color-neutral-300));
+}
+
+.dark .fc-wrapper {
+  --fc-border-color: rgba(var(--color-neutral-600));
+}
+
+.fc {
+  @apply !border-t !border-neutral-300 !rounded-none dark:!border-neutral-600 bg-white dark:bg-neutral-800;
+}
+
+.fc .fc-toolbar {
+  @apply !px-5 !rounded-none !mb-0 !py-2 !bg-neutral-200/60 dark:!bg-neutral-900/40;
+}
+
+.fc .fc-toolbar-title {
+  @apply !text-lg !font-semibold text-neutral-800 dark:text-neutral-200;
+}
+
+.fc .fc-col-header-cell-cushion {
+  @apply !text-sm !font-semibold !py-2.5 !px-2 !text-neutral-700 dark:!text-neutral-200;
+}
+
+.fc .fc-timegrid-slot-label {
+  @apply !text-xs font-light !text-neutral-500 dark:!text-neutral-400 uppercase;
+}
+
+.fc .fc-day.fc-day-today {
+  @apply !bg-white dark:!bg-neutral-800;
+}
+
+.fc .fc-day.fc-day-today .fc-daygrid-day-number {
+  @apply rounded-full bg-primary-600 !text-white dark:!text-white w-6 h-6 flex items-center justify-center mt-1 mr-2 font-semibold;
+}
+
+.fc .fc-day .fc-daygrid-day-number {
+  @apply !text-xs !p-2.5 !text-neutral-600 dark:!text-neutral-300;
+}
+
+.fc .fc-day.fc-day-past, .fc .fc-day.fc-day-future.fc-day-other {
+  @apply !bg-neutral-50 dark:!bg-neutral-700 dark:!bg-opacity-40;
+}
+
+.fc .fc-daygrid-event {
+  @apply !text-sm;
+}
+
+.fc .fc-daygrid-more-link {
+  @apply !text-sm !text-neutral-600 hover:!text-neutral-800;
+}
+
+.fc .fc-timeGridWeek-view .fc-col-header-cell.fc-day-today .fc-col-header-cell-cushion {
+  @apply !text-primary-700 dark:!text-primary-400;
+}
+
+.fc .fc-dayGridMonth-view .fc-day {
+  @apply !p-1;
+}
+
+.fc .fc-event-main > span {
+  @apply opacity-95;
+}
+
+.fc .fc-daygrid-event, .fc-timegrid-event {
+  @apply !rounded-md !px-1;
+}
+
+.fc .fc-event-main {
+  @apply !truncate;
+}
+
+.fc .fc-event-main:hover {
+  @apply !text-clip;
+}
